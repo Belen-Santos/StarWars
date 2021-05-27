@@ -1,0 +1,32 @@
+<h2>Lista de personajes</h2>
+
+<!--d.name, d.height, d.mass, d.birth_year, d.gender, link-->
+<table border="1">
+  <th>Nombre</th>
+  <th>Altura</th>
+  <th>Fecha nacimiento</th>
+  <th>Género</th>
+  <th>Link planeta</th>
+
+  <tr *ngFor="let personaje of arrayPersonajes">
+    <td>{{personaje.name}}</td>
+    <td>{{personaje.height}}</td>
+    <td>{{personaje.birth_year}}</td>
+    <td>{{personaje.gender}}</td>
+    <td> <a href="{{personaje.homeworld}}?format=json"
+        (click)="mostrarPlaneta(personaje.homeworld, $event)">{{personaje.homeworld}}</a>
+    </td>
+  </tr>
+
+</table>
+<br>
+<!--<input *ngIf="urlAnterior != null" type="button" value="Anterior" (click)="mostrarAnterior()">
+<input *ngIf="urlSiguiente != null" type="button" value="Siguiente" (click)="mostrarSiguiente()">-->
+<input [disabled]="!(datos && urlAnterior)" type="button" value="Anterior" (click)="mostrarAnterior()">
+<input [disabled]="!(datos && urlSiguiente)" type="button" value="Siguiente" (click)="mostrarSiguiente()">
+<br><br>
+
+
+<div *ngIf="datosPlaneta">
+  <app-planetas [planeta]="datosPlaneta"></app-planetas>
+</div>

@@ -1,0 +1,45 @@
+table {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  width: 70%;
+  border-collapse: collapse;
+}
+
+
+th {
+  border: 1px solid #98bf21;
+  font-size: 1.2em;
+  padding: 5px;
+  background-color: #A7C942;
+  color: #ffffff;
+}
+
+.estilo_Tabla_1 tr td {
+  color: #000000;
+
+  background-color: #EAF2D3;
+}
+
+#icono {
+  display: none;
+  position: fixed;
+  top: 25%;
+  left: 40%;
+  width: 120px;
+  height: 120px;
+  /*background: url("icono.gif") center no-repeat;*/
+}
+
+caption {
+  caption-side: bottom;
+  color: green;
+}
+
+input {
+  color: brown;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  background-color: beige;
+}
